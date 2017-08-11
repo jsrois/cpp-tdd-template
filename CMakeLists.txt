@@ -8,10 +8,11 @@ project(default_name)
 set(CMAKE_CXX_STANDARD 14)
 
 set(source_files
-        src/sample.h)
+        src/Yatzy.h
+        src/Yatzy.cpp)
+
 set(test_files
-        test/main.test.cpp
-        test/sample.test.cpp)
+        test/main.test.cpp test/yatzy.test.cpp)
 
 add_executable(unit_tests
         ${source_files}
