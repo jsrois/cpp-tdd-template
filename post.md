@@ -229,7 +229,14 @@ The next rule is actually a family of rules:
 
 > Ones, Twos, Threes, Fours, Fives, Sixes: The player scores the sum of the dice that reads one, two, three, four, five or six, respectively.
 
-When we faced the previous two test cases, we only had the Yatzy class. Now that we have introduced part of the logic
+When we faced the previous two test cases, we only had the Yatzy class. Now that we have introduced part of the logic into the
+Roll class, we can analyze the new requirement and realize that we have to check the Roll for the number of dice that scored 1.
+
+``` 
+TEST_CASE("count of number of dice reading one") {
+    REQUIRE(Roll{1,3,1,2,1}.howManyOnes() == 3);
+}
+``` 
 
 ```
 TEST_CASE("in ONES, the score is the number of ones") {
